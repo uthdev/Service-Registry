@@ -1,13 +1,13 @@
 {
-  "name": "cms",
+  "name": "service-registry",
   "version": "1.0.0",
-  "description": "A content management web app",
+  "description": "A generic service registry for Node.js RESTFUL API Microservices",
   "main": "index.js",
   "scripts": {
     "build": "babel -d ./build ./server -s",
     "clean": "rm -rf build",
     "prestart": "npm run clean && npm run build",
-    "start": "node build/index",
+    "start": "node build/index | bunyan",
     "start-dev": "nodemon --exec babel-node ./server/index.js",
     "test": "mocha server/test/**/*.js --require @babel/register",
     "lint": "eslint --fix server/**/*.js"
@@ -15,6 +15,7 @@
   "author": "Uthdev",
   "license": "ISC",
   "dependencies": {
+    "bunyan": "^1.8.12",
     "express": "^4.17.1"
   },
   "devDependencies": {

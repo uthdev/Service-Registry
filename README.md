@@ -1,2 +1,2 @@
-# node-cms
-A node.js content management system
+# Service Registry
+A generic service registry for Node.js RESTFUL API Microservices
