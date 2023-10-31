@@ -25,7 +25,7 @@ server.use((error, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 server.listen(PORT, log.info(
   `Hi there! I'm listening on port ${PORT} in ${server.get('env')} mode.`,
